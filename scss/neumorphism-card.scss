@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+$bgColor: rgb(238, 250, 255);
+$boxShadowColorOne: rgba(0,0,0,0.05);
+$boxShadowColorTwo: rgba(255,255,255,0.05);
+$boxShadowColorThree: rgba(0,0,0,0.02);
+$boxShadowColorFour: rgba(0,0,0,0.3);
+$bgColorCard:  rgb(246, 251, 253);
+$buttonBgColor: rgb(109, 209, 216);
+$hoverButtonBgCOlor: rgb(223, 160, 66);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $bgColor;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  box-shadow: inset 5px 5px 5px $boxShadowColorOne,
+              inset -5px -5px 5px $boxShadowColorTwo,
+              5px 5px 5px $boxShadowColorOne,
+              -5px -5px 5px $boxShadowColorTwo;
+  border-radius: 15px;
+  margin: 30px;
+}
+
+.box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: $bgColorCard;
+  box-shadow: 0 10px 20px $boxShadowColorOne;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card:hover .box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px $boxShadowColorFour;
+  background: linear-gradient(45deg, rgb(222, 114, 255), rgb(47, 47, 255));
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: $boxShadowColorThree;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.card:hover .box .content h2 {
+  color: $boxShadowColorOne;
+}
+
+.content h3 {
+  font-size: 1.8rem;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.content p{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card:hover .box .content h3,
+.card:hover .box .content p {
+  color: #fff;
+}
+
+.content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: $buttonBgColor;
+  margin-top: 15px;
+  border-radius:  20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px $boxShadowColorThree;
+}
+
+.card:hover .box .content a {
+  background: $hoverButtonBgCOlor;
+}
