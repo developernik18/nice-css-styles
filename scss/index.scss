@@ -35,11 +35,11 @@ a{
   text-decoration: none;
 }
 
-a:nth-child(1),a:nth-child(4) {
+a:nth-child(1),a:nth-child(4),a:nth-child(7),a:nth-child(10) {
   filter: hue-rotate(115deg);
 }
 
-a:nth-child(3),a:nth-child(6) {
+a:nth-child(3),a:nth-child(6),a:nth-child(9) {
   filter: hue-rotate(270deg);
 }
 
