@@ -69,4 +69,30 @@ body{
   font-size: 6vw;
   color: orange;
   text-shadow: 1px 1px 10px red;
+  animation: animate 5s linear infinite alternate;
+  transition: all .5s;
 }
+
+// @keyframes animate {
+//   0% {
+//     color: red;
+//     text-shadow: 1px 1px 50px red;
+//   }
+//   25% {
+//     color: yellow;
+//     text-shadow: 1px 1px 50px yellow;
+//   }
+//   50% {
+//     color: rgb(19, 220, 255);
+//     text-shadow: 1px 1px 50px rgb(19, 220, 255);
+//   }
+//   75% {
+//     color: rgb(8, 236, 8);
+//     text-shadow: 1px 1px 50px rgb(8, 236, 8);
+//   }
+//   100% {
+//     color: yellow;
+//     text-shadow: 1px 1px 50px yellow;
+//   }
+// }
+
